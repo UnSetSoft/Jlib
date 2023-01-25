@@ -1,0 +1,58 @@
+name: Latest Build
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+
+env:
+  DATE: $(date +%FT%TZ)
+permissions:
+  contents: read
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: "master"
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{ env.NODE }}"
+
+      - name: Building JavaScript
+
+        run: |
+          npm i
+          npm ci
+          npm run build
+        
+
+      - name: Commit files
+        run: |
+          git config --local user.name "KagariSoft-dev "
+          git add .
+          git commit -m "🏗️ Files updated" -a
+          git tag v${{ steps.package-version.outputs.current-version}}
+      - name: Push changes # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
+
+      - name: Release 📦
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: false
+          generate_release_notes: true
+          tag_name: v${{ steps.package-version.outputs.current-version}}
