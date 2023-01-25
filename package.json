@@ -2,7 +2,7 @@
   "main": "./src/server.js",
   "scripts": {
     "dev": "nodemon .",
-    "build": "uglifyjs ./src/lib/browser/main.js -o dist/kbrowser.min.js --annotations --comments `/*foo*/` -c -m"
+    "build": "uglifyjs ./src/lib/browser/main.js -o dist/kbrowser.min.js --annotations --comments all -c -m"
   },
   "dependencies": {
     "cors": "^2.8.5",
