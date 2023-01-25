@@ -7,6 +7,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 app.use("/lib", express.static(__dirname + "/lib"));
+ 
+
 
 app.use(cors("*"));
 
