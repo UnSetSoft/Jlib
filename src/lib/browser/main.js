@@ -119,8 +119,9 @@ class Kquery {
        * @param elements - The elements to be added to the array.
        */
       constructor(elements) {
+            
             this.elements = [elements]
-            this.self = null
+          
       }
 
       /**
@@ -131,7 +132,7 @@ class Kquery {
        */
       load(fn) {
             document.addEventListener('DOMContentLoaded', fn)
-            return
+            return this
       }
 
       /**
@@ -163,8 +164,8 @@ class Kquery {
        * @returns The event listener.
        */
       event(event, callback) {
-            const ev = this.getElements().forEach(el => el.addEventListener(event, callback))
-            return ev
+            this.getElements().forEach(el => el.addEventListener(event, callback))
+            return this
       }
       
       /**
@@ -183,8 +184,8 @@ class Kquery {
        * @returns the value of the variable ins.
        */
       insertHTML(html) {
-            const ins = this.getElements().forEach(el => el.innerHTML += html)
-            return ins
+            this.getElements().forEach(el => el.innerHTML += html)
+            return this
       }
 
       /**
@@ -193,8 +194,8 @@ class Kquery {
        * @returns The return value is the result of the forEach method.
        */
       disableElement(boolean) {
-            const dis = this.getElements().forEach(el => el.disabled = boolean )
-            return dis
+            this.getElements().forEach(el => el.disabled = boolean )
+            return this
       }
 
       /**
@@ -203,6 +204,8 @@ class Kquery {
        */
       addClass(className) {
             this.getElement().classList.add(className)
+            return this
+            
       }
 
       /**
@@ -211,6 +214,7 @@ class Kquery {
        */
       removeClass(className) {
             this.getElement().classList.remove(className)
+            return this
       }
 
       /**
@@ -220,6 +224,7 @@ class Kquery {
        */
       replaceClass(className, newClassName) {
             this.getElement().classList.replace(className, newClassName)
+            return this
       }
 
       /**
@@ -245,7 +250,7 @@ class Kquery {
        */
       removeChildrens() {
             this.getElement().innerHTML = ""
-            return
+            return this
       }
 }
 

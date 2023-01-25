@@ -1,12 +1,11 @@
 
 
 $().load(() => {
-      $("#hot").addClass("kg-primary")
-      $('#hot').event('click', async () => {
+       $('#hot').event('click', async () => {
+            
+            $("#hot").removeClass("kg-primary")
 
-            $("#hot").removeClass("kg-primary").addClass("pkg-primary")
-
-            const { tag } = $('#hot').getDataSet()
+            const { tag } = $('#hot').getDataSets()
 
             $('#coffe').removeChildrens()
 
@@ -22,7 +21,7 @@ $().load(() => {
 
             $('#clear').disableElement(false)
 
-      })
+      }).addClass("pkg-primary")
 
       $('#iced').event('click', async () => {
 
