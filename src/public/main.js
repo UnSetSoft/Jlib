@@ -1,11 +1,9 @@
-
-
 $().load(() => {
        $('#hot').event('click', async () => {
             
             $("#hot").removeClass("kg-primary")
 
-            const { tag } = $('#hot').getDataSets()
+            const { tag } = $('#hot').getDataSet()
 
             $('#coffe').removeChildrens()
 
