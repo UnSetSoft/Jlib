@@ -1,55 +1,55 @@
-$().load(() => {
-       $('#hot').event('click', async () => {
+_k().load(() => {
+       _k('#hot').event('click', async () => {
             
-            $("#hot").removeClass("kg-primary")
+            _k("#hot").removeClass("kg-primary")
 
-            const { tag } = $('#hot').getDataSet()
+            const { tag } = _k('#hot').getDataSet()
 
-            $('#coffe').removeChildrens()
+            _k('#coffe').removeChildrens()
 
-            const r = await $().remote(`https://api.sampleapis.com/coffee/${tag}`).get();
-            
-            r.map(r => {
-                  $('#coffe').insertHTML(`<li><b>${r.title}:</b> ${r.description}</li>`)
-            })
-            
-            $('#hot').disableElement(true)
-
-            $('#iced').disableElement(false)
-
-            $('#clear').disableElement(false)
-
-      }).addClass("pkg-primary")
-
-      $('#iced').event('click', async () => {
-
-            const { tag } = $('#iced').getDataSet()
-
-            $('#coffe').removeChildrens()
-
-            const r = await $().remote(`https://api.sampleapis.com/coffee/${tag}`).get();
+            const r = await _k().remote(`https://api.sampleapis.com/coffee/_k{tag}`).get();
             
             r.map(r => {
-                  $('#coffe').insertHTML(`<li><b>${r.title}:</b> ${r.description}</li>`)
+                  _k('#coffe').insertHTML(`<li><b>_k{r.title}:</b> _k{r.description}</li>`)
             })
             
-            $('#iced').disableElement(true)
-            $('#hot').disableElement(false)
-            $('#clear').disableElement(false)
+            _k('#hot').disableElement(true)
+
+            _k('#iced').disableElement(false)
+
+            _k('#clear').disableElement(false)
+
       })
 
-      $('#clear').event('click', async () => {
+      _k('#iced').event('click', async () => {
 
-            $('#coffe').removeChildrens()
+            const { tag } = _k('#iced').getDataSet()
+
+            _k('#coffe').removeChildrens()
+
+            const r = await _k().remote(`https://api.sampleapis.com/coffee/_k{tag}`).get();
+            
+            r.map(r => {
+                  _k('#coffe').insertHTML(`<li><b>_k{r.title}:</b> _k{r.description}</li>`)
+            })
+            
+            _k('#iced').disableElement(true)
+            _k('#hot').disableElement(false)
+            _k('#clear').disableElement(false)
+      })
+
+      _k('#clear').event('click', async () => {
+
+            _k('#coffe').removeChildrens()
           
             
-            $('#iced').disableElement(false)
-            $('#hot').disableElement(false)
-            $('#clear').disableElement(true)
+            _k('#iced').disableElement(false)
+            _k('#hot').disableElement(false)
+            _k('#clear').disableElement(true)
       })
 
 
       
       
-      console.log($('button').getElements())
+      console.log(_k('button').getElements())
 })

@@ -1,15 +1,15 @@
 {
-  "version": "1.0.1",
-  "main": "./src/server.js",
+  "version": "1.0.2",
+  "main": "./src/lib/main.js",
   "scripts": {
-    "dev": "nodemon .",
-    "build": "uglifyjs ./src/lib/browser/main.js -o dist/kbrowser.min.js --annotations --comments all -c -m"
+    "dev": "nodemon ./src/server.js",
+    "build": "rollup ./src/lib/main.js --file ./dist/kquery.bundle.min.js --format umd --name 'kquery'"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "nodemon": "^2.0.20",
-    "uglify-js": "^3.17.4"
+    "rollup": "^3.13.0"
   },
   "devDependencies": {}
 }
