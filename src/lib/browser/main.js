@@ -258,11 +258,10 @@ class Kquery {
        * This function returns true if the element has the class, and false if it doesn't.
        * @param str - The class name to check for.
        * @returns The return value is a boolean value.
-       * @status [Beta] this function may not work correctly.
        */
       hasClass(str) {
             return this.getElement().classList.contains(str);
       }
 }
 
-const $ = (el) => new Kquery(el)
+const _k = (el) => new Kquery(el)
