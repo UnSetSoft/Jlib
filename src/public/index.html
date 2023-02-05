@@ -5,28 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kagarisoft/csc/dist/css/common.min.css">
-    <script src="../../dist/kquery.browser.min.js"></script>
-  <style>
-    .flex-buttons{
-      display: flex;
-      gap: 10px;
-    }
-  </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@kagarisoft/csc/dist/css/common.min.css"
+    />
+    <style>
+      .flex-buttons {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+
+    <script type="module" src="https://cdn.jsdelivr.net/gh/Neyunse/kquery/dist/kquery.browser.min.js"></script>
+
+    <script src="./main.js"></script>
   </head>
 
   <body>
-
-      <div class="kg__container">
-        <!-- All content -->
-         <div class="flex-buttons">
-          <button id="hot" data-tag="hot" class="kg__button">Get coffe hot list</button>
-          <button id="iced" data-tag="iced" class="kg__button">Get coffe iced list</button>
-          <button id="clear" class="kg__button" disabled>Clear List</button>
-         </div>
-    
-        <ul id="coffe"></ul>
+    <div class="kg__container">
+      <!-- All content -->
+      <div class="flex-buttons">
+        <button id="hot" data-tag="hot" class="kg__button">
+          Get coffe hot list
+        </button>
+        <button id="iced" data-tag="iced" class="kg__button">
+          Get coffe iced list
+        </button>
+        <button id="clear" class="kg__button" disabled>Clear List</button>
       </div>
-      <script src="./main.js"></script>
+
+      <ul id="coffe"></ul>
+    </div>
   </body>
 </html>
