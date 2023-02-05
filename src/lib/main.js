@@ -1,9 +1,5 @@
-'use strict';
-
-const Kquery = require('./kquery/index')
-
+import Kquery from './kquery/index'
 
 const _k = (el) => new Kquery(el)
 
-
-module.exports = _k;
+export default _k
