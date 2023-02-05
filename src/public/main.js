@@ -7,10 +7,10 @@ _k().load(() => {
 
             _k('#coffe').removeChildrens()
 
-            const r = await _k().remote(`https://api.sampleapis.com/coffee/_k{tag}`).get();
+            const r = await _k().remote(`https://api.sampleapis.com/coffee/${tag}`).get();
             
             r.map(r => {
-                  _k('#coffe').insertHTML(`<li><b>_k{r.title}:</b> _k{r.description}</li>`)
+                  _k('#coffe').insertHTML(`<li><b>${r.title}:</b> ${r.description}</li>`)
             })
             
             _k('#hot').disableElement(true)

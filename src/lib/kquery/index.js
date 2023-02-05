@@ -1,4 +1,4 @@
-import Remote from "../remote/index"
+import Remote from "../remote/index.js"
 
 class Kquery {
       /**

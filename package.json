@@ -1,9 +1,10 @@
 {
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./src/lib/main.js",
   "scripts": {
     "dev": "nodemon ./src/server.js",
-    "build": "rollup ./src/lib/main.js --file ./dist/kquery.bundle.min.js --format umd --name 'kquery'"
+    "b:cjs": "rollup ./src/lib/main.js --file ./dist/kquery.module.min.js --format cjs",
+    "b:iife": "rollup ./src/lib/main.js --file ./dist/kquery.browser.min.js --format iife"
   },
   "dependencies": {
     "cors": "^2.8.5",

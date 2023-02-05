@@ -35,7 +35,8 @@ jobs:
         run: |
           npm i
           npm ci
-          npm run build
+          npm run b:cjs
+          npm run b:iife
         
 
       - name: Commit files
