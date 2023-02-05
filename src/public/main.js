@@ -1,3 +1,4 @@
+
 _k().load(() => {
        _k('#hot').event('click', async () => {
             
