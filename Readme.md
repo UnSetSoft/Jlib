@@ -43,7 +43,3 @@ Using Remote call to an api using `get()` method
 ```javascript
 _k().remote("https://api.sampleapis.com/coffee/hot").get();
 ```
-
-### Jquery vs Kquery
-
-
