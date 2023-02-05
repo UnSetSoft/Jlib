@@ -112,4 +112,4 @@ class Remote {
       }
 }
 
-module.exports = Remote
+export default Remote
