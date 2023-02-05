@@ -1,5 +1,4 @@
-import Remote from "../remote/index"
-
+const Remote = require("../remote/index")
 class Kquery {
       /**
        * The constructor function takes in an element and assigns it to the elements property of the
@@ -152,4 +151,4 @@ class Kquery {
       }
 }
 
-export default Kquery
+module.exports = Kquery
