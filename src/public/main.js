@@ -1,5 +1,3 @@
-import _k from 'https://cdn.jsdelivr.net/gh/Neyunse/kquery/dist/kquery.bundle.min.js';
-
 _k().load(() => {
        _k('#hot').event('click', async () => {
             
