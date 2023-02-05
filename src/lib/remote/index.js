@@ -49,27 +49,6 @@ class Remote {
             })
       }
 
-      /**
-       * It sends a POST request to the url, and returns the response in JSON format
-       * @param [options] - The options object is the same as the fetch api, you can pass headers,
-       * body, etc.
-       * @returns The data from the api.
-       */
-      async post(options = {}) {
-            return await fetch(this.url, {
-                  method: "POST",
-                  ...options
-            }).then((r) => {
-                  if (!r) {
-                      throw new Error("An error occurred in the api, check the log of the response.")  
-                  }
-
-                  return r.json()
-            }).then((data) => data).catch((err) => {
-                  return err.message
-            })
-      }
-
 
       /**
        * It takes an options object and returns a promise that resolves to a json object
