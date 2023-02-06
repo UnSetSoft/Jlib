@@ -2,3 +2,4 @@
 /yarn.lock
 src/public/*
 src/server.js
+src/lib/dev.js

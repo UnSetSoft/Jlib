@@ -48,8 +48,29 @@ _k().load(() => {
             _k('#clear').disableElement(true)
       })
 
+      _k('#boxbtn').event('click', () => {
+            _k('#box').toggleClass("active")
+      })
+
+      _k('#fadeIn').event('click', () => { 
+            _k('#box').animate().fadeIn()
+      })
+
+      _k('#fadeOut').event('click', () => { 
+            _k('#box').animate().fadeOut()
+      })
+
+      _k('#rotate').event('click', () => { 
+            
+            _k('#box').animate().anime([
+                  {transform: 'rotate(360deg)'}
+            ])
+      })
+
 
       
       
       console.log(_k('button').getElements())
+
+
 })
