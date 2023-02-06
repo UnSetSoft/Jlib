@@ -14,15 +14,32 @@
         display: flex;
         gap: 10px;
       }
+      .box {
+        width: 200px;
+        height: 200px;
+        display: block;
+        background: red;
+        border-radius: 5px;
+      }
+
+      .box.active {
+        background-color: green;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
     </style>
 
-    <script src="https://cdn.jsdelivr.net/gh/Neyunse/kquery@1.0.7/dist/kquery.browser.min.js"></script>
+    <script src="/lib/dev.js"></script>
 
     <script src="./main.js"></script>
   </head>
 
   <body>
-    <div class="kg__container">
+    <div class="kg__container container">
       <!-- All content -->
       <div class="flex-buttons">
         <button id="hot" data-tag="hot" class="kg__button">
@@ -32,9 +49,17 @@
           Get coffe iced list
         </button>
         <button id="clear" class="kg__button" disabled>Clear List</button>
+        <button id="boxbtn" class="kg__button">Toggle Active</button>
+        <button id="fadeIn" class="kg__button">FadeIn</button>
+        <button id="fadeOut" class="kg__button">FadeOut</button>
+        <button id="rotate" class="kg__button">
+          Custom animation (rotation)
+        </button>
       </div>
 
       <ul id="coffe"></ul>
+
+      <div id="box" class="box"></div>
     </div>
   </body>
 </html>
