@@ -1,5 +1,7 @@
 # What's Kquery?
 
+[![](https://data.jsdelivr.com/v1/package/gh/Neyunse/kquery/badge?style=rounded)](https://www.jsdelivr.com/package/gh/Neyunse/kquery)
+
 This library is based on Jquery, because jquery is somewhat outdated is that this clone is born. 
 
 Kquery works in the same way as jquery, however, many of the events or functions of jquery are not recreated here. Either to simplify the code or because it may be a future feature, Kquery is easy and fast to use. 
