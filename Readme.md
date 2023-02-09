@@ -1,3 +1,5 @@
+<img src="https://github.com/Neyunse/kquery-snippets/blob/main/icon.png" width="200" height="200" />
+
 # What's Kquery?
 
 [![](https://data.jsdelivr.com/v1/package/gh/Neyunse/kquery/badge?style=rounded)](https://www.jsdelivr.com/package/gh/Neyunse/kquery)
