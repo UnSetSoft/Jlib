@@ -40,6 +40,7 @@ jobs:
 
       - name: Commit files
         run: |
+          git config --global user.email "dev@kagarisoft.com"
           git config --local user.name "KagariSoft-dev "
           git add .
           git commit -m "🏗️ Files updated" -a
