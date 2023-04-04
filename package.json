@@ -1,15 +1,31 @@
 {
-  "version": "1.1.4",
+  "version": "1.1.5",
   "main": "./src/lib/main.js",
   "scripts": {
     "dev": "nodemon ./src/server.js",
     "build": "rollup ./src/lib/main.js --file ./dist/kquery.js --format umd --name _k"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "nodemon": "^2.0.20",
-    "rollup": "^3.13.0"
+    "cors": "2.8.5",
+    "express": "4.18.2",
+    "nodemon": "2.0.20",
+    "rollup": "3.13.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "name": "@unsetsoft/kquery",
+  "description": "What's Kquery? A vanilla JS lib!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnSetSoft/kquery.git"
+  },
+  "keywords": [
+    "javascript",
+    "kquery"
+  ],
+  "author": "Neyunse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UnSetSoft/kquery/issues"
+  },
+  "homepage": "https://github.com/UnSetSoft/kquery#readme"
 }

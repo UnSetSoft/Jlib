@@ -37,7 +37,13 @@ jobs:
           npm ci
           npm run b:cjs
           npm run b:iife
-        
+      
+      - name: Publish CSC
+        run: |
+          npm ci
+          npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
 
       - name: Commit files
         run: |
@@ -57,3 +63,5 @@ jobs:
           draft: false
           generate_release_notes: true
           tag_name: v${{ steps.package-version.outputs.current-version}}
+      
+      - name: Publish changes
