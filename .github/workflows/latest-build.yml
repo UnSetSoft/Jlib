@@ -35,8 +35,7 @@ jobs:
         run: |
           npm i
           npm ci
-          npm run b:cjs
-          npm run b:iife
+          npm run build
       
       - name: Publish CSC
         run: |
