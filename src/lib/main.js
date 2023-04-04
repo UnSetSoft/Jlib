@@ -1,6 +1,7 @@
-import Kquery from './kquery/index.js'
-const _k = (el) => new Kquery(el)
+import Ryunix from "./ryunix/index.js";
+const _r = (el) => new Ryunix(el);
 
-window._k = _k;
+window._r = _r;
 
-export default _k
+export default _r;
+export { Ryunix };
