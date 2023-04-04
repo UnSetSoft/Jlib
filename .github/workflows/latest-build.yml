@@ -30,8 +30,7 @@ jobs:
         with:
           node-version: "${{ env.NODE }}"
 
-      - name: Building JavaScript
-
+      - name: Building JavaScrip
         run: |
           npm i
           npm ci
@@ -62,5 +61,3 @@ jobs:
           draft: false
           generate_release_notes: true
           tag_name: v${{ steps.package-version.outputs.current-version}}
-      
-      - name: Publish changes
