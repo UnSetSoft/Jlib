@@ -35,12 +35,18 @@ jobs:
         run: |
           npm i
           npm ci
-          npm run build
-        
+          npm run b:cjs
+          npm run b:iife
+      
+      - name: Publish CSC
+        run: |
+          npm ci
+          npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN}}
 
       - name: Commit files
         run: |
-          git config --global user.email "dev@kagarisoft.com"
           git config --local user.name "KagariSoft-dev "
           git add .
           git commit -m "🏗️ Files updated" -a
@@ -57,3 +63,5 @@ jobs:
           draft: false
           generate_release_notes: true
           tag_name: v${{ steps.package-version.outputs.current-version}}
+      
+      - name: Publish changes
