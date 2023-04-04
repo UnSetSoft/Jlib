@@ -3,7 +3,7 @@
   "main": "./src/lib/main.js",
   "scripts": {
     "dev": "nodemon ./src/server.js",
-    "build": "rollup ./src/lib/main.js --file ./dist/kquery.js --format umd --name _k"
+    "build": "rollup ./src/lib/main.js --file ./dist/ryunix.js --format umd --name _k"
   },
   "dependencies": {
     "cors": "2.8.5",
@@ -12,20 +12,20 @@
     "rollup": "3.13.0"
   },
   "devDependencies": {},
-  "name": "@unsetsoft/kquery",
-  "description": "What's Kquery? A vanilla JS lib!",
+  "name": "@unsetsoft/ryunix",
+  "description": "What's Ryunix? A vanilla JS lib!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UnSetSoft/kquery.git"
+    "url": "git+https://github.com/UnSetSoft/Ryunix.git"
   },
   "keywords": [
     "javascript",
-    "kquery"
+    "Ryunix"
   ],
   "author": "Neyunse",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/UnSetSoft/kquery/issues"
+    "url": "https://github.com/UnSetSoft/Ryunix/issues"
   },
-  "homepage": "https://github.com/UnSetSoft/kquery#readme"
+  "homepage": "https://github.com/UnSetSoft/Ryunix#readme"
 }
