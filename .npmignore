@@ -1,5 +1,7 @@
 /node_modules
 /yarn.lock
-/src
+/src/server.js
+/src/public
+
 /.vscode
 /.github

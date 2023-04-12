@@ -1,76 +1,79 @@
-_k().load(() => {
-       _k('#hot').event('click', async () => {
-            
-            _k("#hot").removeClass("kg-primary")
+_r().load(() => {
+  _r("#hot").event("click", async () => {
+    _r("#hot").removeClass("kg-primary");
 
-            const { tag } = _k('#hot').getDataSet()
+    const { tag } = _r("#hot").getDataSet();
 
-            _k('#coffe').removeChildrens()
+    _r("#coffe").removeChildrens();
 
-            const r = await _k().remote(`https://api.sampleapis.com/coffee/${tag}`).get();
-            
-            r.map(r => {
-                  _k('#coffe').insertHTML(`<li><b>${r.title}:</b> ${r.description}</li>`)
-            })
-            
-            _k('#hot').disableElement(true)
+    const r = await _r()
+      .remote(`https://api.sampleapis.com/coffee/${tag}`)
+      .get();
 
-            _k('#iced').disableElement(false)
+    r.map((r) => {
+      _r("#coffe").insertHTML(`<li><b>${r.title}:</b> ${r.description}</li>`);
+    });
 
-            _k('#clear').disableElement(false)
+    _r("#hot").disableElement(true);
 
-      })
+    _r("#iced").disableElement(false);
 
-      _k('#iced').event('click', async () => {
+    _r("#clear").disableElement(false);
+  });
 
-            const { tag } = _k('#iced').getDataSet()
+  _r("#iced").event("click", async () => {
+    const { tag } = _r("#iced").getDataSet();
 
-            _k('#coffe').removeChildrens()
+    _r("#coffe").removeChildrens();
 
-            const r = await _k().remote(`https://api.sampleapis.com/coffee/_k{tag}`).get();
-            
-            r.map(r => {
-                  _k('#coffe').insertHTML(`<li><b>_k{r.title}:</b> _k{r.description}</li>`)
-            })
-            
-            _k('#iced').disableElement(true)
-            _k('#hot').disableElement(false)
-            _k('#clear').disableElement(false)
-      })
+    const r = await _r()
+      .remote(`https://api.sampleapis.com/coffee/_r{tag}`)
+      .get();
 
-      _k('#clear').event('click', async () => {
+    r.map((r) => {
+      _r("#coffe").insertHTML(`<li><b>_r{r.title}:</b> _r{r.description}</li>`);
+    });
 
-            _k('#coffe').removeChildrens()
-          
-            
-            _k('#iced').disableElement(false)
-            _k('#hot').disableElement(false)
-            _k('#clear').disableElement(true)
-      })
+    _r("#iced").disableElement(true);
+    _r("#hot").disableElement(false);
+    _r("#clear").disableElement(false);
+  });
 
-      _k('#boxbtn').event('click', () => {
-            _k('#box').toggleClass("active")
-      })
+  _r("#clear").event("click", async () => {
+    _r("#coffe").removeChildrens();
 
-      _k('#fadeIn').event('click', () => { 
-            _k('#box').animate().fadeIn()
-      })
+    _r("#iced").disableElement(false);
+    _r("#hot").disableElement(false);
+    _r("#clear").disableElement(true);
+  });
 
-      _k('#fadeOut').event('click', () => { 
-            _k('#box').animate().fadeOut()
-      })
+  _r("#boxbtn").event("click", () => {
+    _r("#box").toggleClass("active");
+  });
 
-      _k('#rotate').event('click', () => { 
-            
-            _k('#box').animate().anime([
-                  {transform: 'rotate(360deg)'}
-            ])
-      })
+  _r("#fadeIn").event("click", () => {
+    _r("#box").animate().fadeIn();
+  });
 
+  _r("#fadeOut").event("click", () => {
+    _r("#box").animate().fadeOut();
+  });
 
-      
-      
-      console.log(_k('button').getElements())
+  _r("#rotate").event("click", () => {
+    _r("#box")
+      .animate()
+      .anime([{ transform: "rotate(360deg)" }]);
+  });
 
+  let [counter, setCounter] = _r().useStore(0);
 
-})
+  console.log(counter);
+
+  _r("#increment").event("click", () => {
+    counter++
+    setCounter(counter);
+    console.log(counter);
+  });
+
+  console.log(_r("button").getElements());
+});
