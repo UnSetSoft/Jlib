@@ -67,7 +67,7 @@ _r().load(() => {
 
   let [counter, setCounter] = _r().useStore(0);
 
-  _r("#count").insertHTML(`${counter}`);
+  _r("#count").insertTXT(`${counter}`);
 
   _r("#increment").event("click", () => {
     counter++;
