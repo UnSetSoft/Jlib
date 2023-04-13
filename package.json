@@ -1,5 +1,5 @@
 {
-  "version": "1.1.14",
+  "version": "1.1.15",
   "main": "./src/lib/main.js",
   "scripts": {
     "dev": "nodemon ./src/server.js",
@@ -27,5 +27,5 @@
   "bugs": {
     "url": "https://github.com/UnSetSoft/Ryunix/issues"
   },
-  "homepage": "https://github.com/UnSetSoft/Ryunix#readme"
+  "homepage": "https://github.com/UnSetSoft/Ryunix#README"
 }
