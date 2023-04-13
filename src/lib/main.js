@@ -4,4 +4,4 @@ window._r = _r;
 
 
 export default _r;
-export { Ryunix};
+export { Ryunix };

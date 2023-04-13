@@ -253,6 +253,7 @@ class Ryunix {
    * constructor. If no value is provided, the store will be initialized with a null value.
    * @returns A hook that creates a new instance of the Store class with an optional initial value.
    */
+  
   storage(val = null) {
     return new Store(val).hook();
   }
