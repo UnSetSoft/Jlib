@@ -67,12 +67,12 @@ _r().load(() => {
 
   let [counter, setCounter] = _r().useStore(0);
 
-  console.log(counter);
+  _r("#count").insertHTML(`${counter}`);
 
   _r("#increment").event("click", () => {
-    counter++
+    counter++;
     setCounter(counter);
-    console.log(counter);
+    _r("#count").insertTXT(`${counter}`);
   });
 
   console.log(_r("button").getElements());

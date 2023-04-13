@@ -69,8 +69,40 @@ class Ryunix {
    * @param html - The HTML to insert.
    * @returns the value of the variable ins.
    */
-  insertHTML(html) {
+  insertsHTML(html) {
     this.getElements().forEach((el) => (el.innerHTML += html));
+    return this;
+  }
+
+  /**
+   * The function appends text to the inner text of all elements returned by a selector.
+   * @param txt - txt is a parameter that represents the text that will be inserted into the innerText
+   * property of the selected elements.
+   * @returns the current object (`this`) to allow for method chaining.
+   */
+  insertsTXT(txt) {
+    this.getElements().forEach((el) => (el.innerText += txt));
+    return this;
+  }
+
+  /**
+   * The function sets the inner text of an element and returns the element.
+   * @param txt - The text that will be inserted into the element's inner text.
+   * @returns the object that called it, which is likely an instance of a class or an object with a
+   * similar structure.
+   */
+  insertTXT(txt) {
+    this.getElement().innerText = txt;
+    return this;
+  }
+
+  /**
+   * The function inserts HTML code into an element's innerHTML property and returns the element.
+   * @param html - The HTML code that will be inserted into the element's innerHTML property.
+   * @returns The object that the `insertHTML` method belongs to is being returned.
+   */
+  insertHTML(html) {
+    this.getElement().innerHTML = html;
     return this;
   }
 
