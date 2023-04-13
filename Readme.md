@@ -1,7 +1,5 @@
 # What's Ryunix? A vanilla JS lib!
 
-[![](https://data.jsdelivr.com/v1/package/gh/Neyunse/kquery/badge?style=rounded)](https://www.jsdelivr.com/package/gh/unsetsoft/kquery)
-
 This library is based on Jquery, because jquery is somewhat outdated is that this clone is born. 
 
 Ryunix works in the same way as jquery, however, many of the events or functions of jquery are not recreated here. Either to simplify the code, Ryunix is easy and fast to use. 
