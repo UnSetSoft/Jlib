@@ -257,6 +257,22 @@ class Ryunix {
   storage(val = null) {
     return new Store(val).hook();
   }
+
+  /**
+   * 
+   * @param {*} val 
+   * @returns type of value
+   * 
+   * @example
+   * const str = "Hello World"
+   * _r().typeof(str) // "string"
+   * 
+   */
+  typeof(val) {
+    if (val == null) return "null"
+    return typeof val
+  }
+
 }
 
 export default Ryunix;
