@@ -1,7 +1,7 @@
 import Remote from "../remote/index.js";
 import Animate from "../animate/index.js";
-import Store from "../hooks/store.js";
-class Ryunix {
+import Random from "../Random/index.js";
+class Jlib {
   /**
    * The constructor function takes in an element and assigns it to the elements property of the
    * object.
@@ -247,16 +247,9 @@ class Ryunix {
     return this;
   }
 
-  /**
-   * The function returns a new instance of a Store object with a specified value and hooks it.
-   * @param [val=null] - The val parameter is an optional initial value that can be passed to the Store
-   * constructor. If no value is provided, the store will be initialized with a null value.
-   * @returns A hook that creates a new instance of the Store class with an optional initial value.
-   */
-  
-  storage(val = null) {
-    return new Store(val).hook();
+  Aleatory(seed = Date.now()) {
+    return new Random(seed);
   }
 }
 
-export default Ryunix;
+export default Jlib;
