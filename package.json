@@ -1,7 +1,7 @@
 {
   "name": "@unsetsoft/jlib",
   "version": "1.0.0",
-  "main": "./src/lib/main.js",
+  "main": "./dist/Jlib.js",
   "scripts": {
     "dev": "nodemon ./src/server.js",
     "build": "rollup ./src/lib/main.js --file ./dist/Jlib.js --format umd --name Jlib"
