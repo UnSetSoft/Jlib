@@ -9,10 +9,11 @@
   "dependencies": {
     "cors": "2.8.5",
     "express": "4.21.2",
-    "nodemon": "3.1.10",
     "rollup": "3.29.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "3.1.10"
+  },
   "description": "What's Jlib? A vanilla JS lib!",
   "repository": {},
   "keywords": [
