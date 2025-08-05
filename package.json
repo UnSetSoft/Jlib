@@ -9,7 +9,7 @@
   "dependencies": {
     "cors": "2.8.5",
     "express": "4.21.2",
-    "nodemon": "3.0.0",
+    "nodemon": "3.1.10",
     "rollup": "3.29.5"
   },
   "devDependencies": {},
