@@ -1,6 +1,6 @@
 {
   "name": "@unsetsoft/jlib",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "main": "./dist/Jlib.js",
   "scripts": {
     "dev": "nodemon ./src/server.js",
@@ -19,7 +19,7 @@
     "javascript",
     "Jlib"
   ],
-  "author": "Neyunse",
+  "author": "UnSetSoft",
   "license": "MIT",
   "bugs": {},
   "homepage": ""

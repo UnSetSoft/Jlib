@@ -1,7 +1,8 @@
 /node_modules
 /yarn.lock
-/src/server.js
-/src/public
-
+/src
 /.vscode
 /.github
+.npmrc
+package-lock.json
+package.json
