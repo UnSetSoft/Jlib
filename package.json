@@ -4,7 +4,7 @@
   "main": "./dist/Jlib.js",
   "scripts": {
     "dev": "nodemon ./src/server.js",
-    "build": "rollup ./src/lib/main.js --file ./dist/Jlib.js --format umd --name Jlib",
+    "build": "rollup ./src/lib/main.js --file ./dist/Jlib.js --format umd --name Jlib --exports named",
     "build:publish": "npm run build && npm publish"
   },
   "dependencies": {
