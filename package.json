@@ -1,17 +1,17 @@
 {
   "name": "@unsetsoft/jlib",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./dist/Jlib.js",
   "scripts": {
     "dev": "nodemon ./src/server.js",
     "build": "rollup ./src/lib/main.js --file ./dist/Jlib.js --format umd --name Jlib"
   },
   "dependencies": {
-    "cors": "2.8.5",
-    "express": "4.21.2",
-    "rollup": "3.29.5"
+    "rollup": "4.52.0"
   },
   "devDependencies": {
+    "cors": "2.8.5",
+    "express": "5.1.0",
     "nodemon": "3.1.10"
   },
   "description": "What's Jlib? A vanilla JS lib!",
